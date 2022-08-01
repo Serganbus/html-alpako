@@ -119,13 +119,16 @@
 }
 
 .alpako-calendar > .content > .row > .col > .item {
-    display: block;
+    display: flex;
     position: absolute;
     
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .alpako-calendar > .content > .row > .col > .item.inactive {
@@ -167,12 +170,11 @@
 
 .alpako-calendar > .content > .row > .col > .item.selected-first > .bg-selected,
 .alpako-calendar > .content > .row > .col > .item.selected-last > .bg-selected {
+    width: 100%;
     height: 100%;
     border-radius: 50%;
     background-color: #425c6b;
-}
 
-.alpako-calendar > .content > .row > .col > .item .num {
     display: flex;
     justify-content: center;
     align-items: center;
