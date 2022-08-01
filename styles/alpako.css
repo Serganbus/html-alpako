@@ -66,16 +66,16 @@
 }
 
 .alpako-calendar > nav {
-    height: 44.67px;
-
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    padding: 15px 0px;
 }
 
 .alpako-calendar > nav > .prev,
 .alpako-calendar > nav > .next {
     flex-grow: 1;
+    font-size: 2em;
 }
 
 .alpako-calendar > nav > .month {
