@@ -27,14 +27,11 @@
 }
 
 .alpako-calendar {
-    padding: 4px;
-
     position: relative;
 
     min-width: 240px;
     max-width: 320px;
     width: 100%;
-    /* height: 284px; */
 
     background: rgba(19, 20, 23, 0.9);
 
@@ -95,7 +92,7 @@
 }
 
 .alpako-calendar > .content > .row {
-    margin: 4px;
+    margin-bottom: 8px;
 
     display: flex;
     justify-content: center;
@@ -105,10 +102,22 @@
     flex-shrink: 1;
 }
 
+.alpako-calendar > .content > .row .selected {
+    background: #2D9CDB;
+}
+
 .alpako-calendar > .content > .row > .col {
     position: relative; 
 
     flex-grow: 1;
+}
+
+.alpako-calendar > .content > .row > .col:first-child {
+    padding-left: 8px;
+}
+
+.alpako-calendar > .content > .row > .col:last-child {
+    padding-right: 8px;
 }
 
 .alpako-calendar > .content > .row > .col::before {
@@ -131,6 +140,14 @@
     align-items: center;
 }
 
+.alpako-calendar > .content > .row > .col:first-child > .item {
+    left: 8px;
+}
+
+.alpako-calendar > .content > .row > .col:last-child > .item {
+    right: 8px;
+}
+
 .alpako-calendar > .content > .row > .col > .item.inactive {
     opacity: 0.5;
 }
@@ -145,13 +162,7 @@
     border-radius: 50%;
 }
 
-.alpako-calendar > .content > .row > .col > .item.selected-mid {
-    border: 2px solid #2D9CDB;
-    background: #2D9CDB;
-}
-
 .alpako-calendar > .content > .row > .col > .item.selected-first {
-    background: #2D9CDB;
     border: 2px solid #2D9CDB;
     border-radius: 50%;
     border-right: 0px;
@@ -160,7 +171,6 @@
 }
 
 .alpako-calendar > .content > .row > .col > .item.selected-last {
-    background: #2D9CDB;
     border: 2px solid #2D9CDB;
     border-radius: 50%;
     border-left: 0px;
