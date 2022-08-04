@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+%flex-element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%cursor-pointer {
+    cursor: pointer;
+}
+
+.alpako-calendar {
+    position: relative;
+
+    min-width: 240px;
+    max-width: 400px;
+    width: 100%;
+
+    background: rgba(19, 20, 23, 0.9);
+
+    box-sizing: border-box;
+    
+    text-align: center;
+
+    font: 12px/14px 'Roboto';
+    font-weight: 500;
+    color: white;
+
+    border-radius: 6px;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+
+        background: url('../images/bg.png') center no-repeat;
+        background-size: cover;
+
+        border-radius: 6px;
+    }
+
+    & > nav {
+        @extend %flex-element-center;
+        
+        padding: 15px 0px;
+
+        & > .prev,
+        & > .next {
+            flex-grow: 1;
+            font-size: 2em;
+
+            &:hover {
+                @extend %cursor-pointer;
+            }
+        }
+
+        & > .month {
+            flex-grow: 5;
+
+            text-transform: uppercase;
+
+            &:hover {
+                @extend %cursor-pointer;
+            }
+        }
+    }
+
+    & > .content {
+        @extend %flex-element-center;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        line-height: 25px;
+
+        & > .row {
+            @extend %flex-element-center;
+
+            margin-bottom: 8px;
+            flex-direction: row;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            & .selected {
+                background: #2D9CDB;
+            }
+
+            & .selected-one {
+                background: #425c6b;
+            }
+
+            & .bordered {
+                border: 2px solid #2D9CDB;
+                border-radius: 50%;
+            }
+
+            & .col {
+                position: relative; 
+                flex-grow: 1;
+
+                &:first-child {
+                    padding-left: 8px;
+    
+                    & > .item {
+                        left: 8px;
+                    }
+                }
+    
+                &:last-child {
+                    padding-right: 8px;
+    
+                    & > .item {
+                        right: 8px;
+                    }
+                }
+
+                &::before {
+                    display: block; /* отображать элемент как блок */
+                    content: ""; /* содержимое псевдоэлемента */
+                    width: 100%; /* ширина элемента */
+                    padding-top: 100%; /* (1:1)*100% */
+                }
+
+                & > .item {
+                    @extend %flex-element-center;
+    
+                    position: absolute;
+        
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+    
+                    &.inactive {
+                        opacity: 0.5;
+                    }
+    
+                    &:hover {
+                        @extend %cursor-pointer;
+                    }
+    
+                    &.selected-first {
+                        border-right: 0px;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+    
+                        & > .bg-selected {
+                            @extend %flex-element-center;
+    
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+    
+                    &.selected-last {
+                        border-left: 0px;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+    
+                        & > .bg-selected {
+                            @extend %flex-element-center;
+                            
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
