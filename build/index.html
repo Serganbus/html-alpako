@@ -6,527 +6,193 @@
     <title>Альпако календарь</title>
     <link rel="stylesheet" href="./alpako.css">
   </head>
-  <body style="display: flex; flex-wrap: nowrap; justify-content: space-around; align-items: center;">
-    <div style="width:240px;">
-      <h2>Width 240px</h2>
-      <div class="alpako-calendar">
-        <nav>
-          <div class="prev ta-center">&#8249;</div>
-          <div class="month ta-center">Январь</div>
-          <div class="next ta-center">&#8250;</div>
-        </nav>
-        <div class="content">
-          <div class="row">
-            <div class="col">
-              <div class="item bordered selected-one">1</div>
-            </div>
-            <div class="col">
-              <div class="item">2</div>
-            </div>
-            <div class="col">
-              <div class="item">3</div>
-            </div>
-            <div class="col">
-              <div class="item">4</div>
-            </div>
-            <div class="col">
-              <div class="item">5</div>
-            </div>
-            <div class="col">
-              <div class="item">6</div>
-            </div>
-            <div class="col">
-              <div class="item">7</div>
-            </div>
+  <body>
+    <div style="display: flex; flex-wrap: nowrap; justify-content: space-around; align-items: center;">
+      <div style="width:240px;">
+        <h2>Width 240px</h2>
+        <div class="calendar">
+          <div class="calendar__nav">
+            <button class="calendar__prev"><span class="arrow-left"> </span></button>
+            <div class="calendar__month">Январь</div>
+            <button class="calendar__next"><span class="arrow-right"></span></button>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">8</div>
-            </div>
-            <div class="col">
-              <div class="item">9</div>
-            </div>
-            <div class="col">
-              <div class="item">10</div>
-            </div>
-            <div class="col">
-              <div class="item">11</div>
-            </div>
-            <div class="col">
-              <div class="item">12</div>
-            </div>
-            <div class="col">
-              <div class="item">13</div>
-            </div>
-            <div class="col">
-              <div class="item">14</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">15</div>
-            </div>
-            <div class="col">
-              <div class="item">16</div>
-            </div>
-            <div class="col">
-              <div class="item">17</div>
-            </div>
-            <div class="col">
-              <div class="item">18</div>
-            </div>
-            <div class="col">
-              <div class="item">19</div>
-            </div>
-            <div class="col">
-              <div class="item">20</div>
-            </div>
-            <div class="col">
-              <div class="item">21</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">22</div>
-            </div>
-            <div class="col">
-              <div class="item">23</div>
-            </div>
-            <div class="col">
-              <div class="item">24</div>
-            </div>
-            <div class="col">
-              <div class="item">25</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-first">
-                <div class="bg-selected selected-one">26</div>
-              </div>
-            </div>
-            <div class="col selected">
-              <div class="item">27</div>
-            </div>
-            <div class="col selected">
-              <div class="item">28</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col selected">
-              <div class="item">29</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-last">
-                <div class="bg-selected selected-one">30</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="item inactive">1</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">2</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">3</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">4</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">5</div>
-            </div>
+          <div class="calendar__body">
+            <button class="calendar__day _active _start _end">1</button>
+            <button class="calendar__day">2</button>
+            <button class="calendar__day">3</button>
+            <button class="calendar__day">4</button>
+            <button class="calendar__day">5</button>
+            <button class="calendar__day">6</button>
+            <button class="calendar__day">7</button>
+            <button class="calendar__day">8</button>
+            <button class="calendar__day">9</button>
+            <button class="calendar__day">10</button>
+            <button class="calendar__day">11</button>
+            <button class="calendar__day">12</button>
+            <button class="calendar__day">13</button>
+            <button class="calendar__day">14</button>
+            <button class="calendar__day">15</button>
+            <button class="calendar__day">16</button>
+            <button class="calendar__day">17</button>
+            <button class="calendar__day">18</button>
+            <button class="calendar__day">19</button>
+            <button class="calendar__day">20</button>
+            <button class="calendar__day">21</button>
+            <button class="calendar__day">22</button>
+            <button class="calendar__day">23</button>
+            <button class="calendar__day">24</button>
+            <button class="calendar__day">25</button>
+            <button class="calendar__day _active _start">26</button>
+            <button class="calendar__day _active">27</button>
+            <button class="calendar__day _active">28</button>
+            <button class="calendar__day _active">29</button>
+            <button class="calendar__day _active _end">30</button>
+            <button class="calendar__day _inactive">1</button>
+            <button class="calendar__day _inactive">2</button>
+            <button class="calendar__day _inactive">3</button>
+            <button class="calendar__day _inactive">4</button>
+            <button class="calendar__day _inactive">5</button>
           </div>
         </div>
       </div>
-    </div>
-    <div style="width:280px;">
-      <h2>Width 280px</h2>
-      <div class="alpako-calendar">
-        <nav>
-          <div class="prev ta-center">&#8249;</div>
-          <div class="month ta-center">Январь</div>
-          <div class="next ta-center">&#8250;</div>
-        </nav>
-        <div class="content">
-          <div class="row">
-            <div class="col">
-              <div class="item bordered selected-one">1</div>
-            </div>
-            <div class="col">
-              <div class="item">2</div>
-            </div>
-            <div class="col">
-              <div class="item">3</div>
-            </div>
-            <div class="col">
-              <div class="item">4</div>
-            </div>
-            <div class="col">
-              <div class="item">5</div>
-            </div>
-            <div class="col">
-              <div class="item">6</div>
-            </div>
-            <div class="col">
-              <div class="item">7</div>
-            </div>
+      <div style="width:280px;">
+        <h2>Width 280px</h2>
+        <div class="calendar">
+          <div class="calendar__nav">
+            <button class="calendar__prev"><span class="arrow-left"> </span></button>
+            <div class="calendar__month">Январь</div>
+            <button class="calendar__next"><span class="arrow-right"></span></button>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">8</div>
-            </div>
-            <div class="col">
-              <div class="item">9</div>
-            </div>
-            <div class="col">
-              <div class="item">10</div>
-            </div>
-            <div class="col">
-              <div class="item">11</div>
-            </div>
-            <div class="col">
-              <div class="item">12</div>
-            </div>
-            <div class="col">
-              <div class="item">13</div>
-            </div>
-            <div class="col">
-              <div class="item">14</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">15</div>
-            </div>
-            <div class="col">
-              <div class="item">16</div>
-            </div>
-            <div class="col">
-              <div class="item">17</div>
-            </div>
-            <div class="col">
-              <div class="item">18</div>
-            </div>
-            <div class="col">
-              <div class="item">19</div>
-            </div>
-            <div class="col">
-              <div class="item">20</div>
-            </div>
-            <div class="col">
-              <div class="item">21</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">22</div>
-            </div>
-            <div class="col">
-              <div class="item">23</div>
-            </div>
-            <div class="col">
-              <div class="item">24</div>
-            </div>
-            <div class="col">
-              <div class="item">25</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-first">
-                <div class="bg-selected selected-one">26</div>
-              </div>
-            </div>
-            <div class="col selected">
-              <div class="item">27</div>
-            </div>
-            <div class="col selected">
-              <div class="item">28</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col selected">
-              <div class="item">29</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-last">
-                <div class="bg-selected selected-one">30</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="item inactive">1</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">2</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">3</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">4</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">5</div>
-            </div>
+          <div class="calendar__body">
+            <button class="calendar__day _active _start _end">1</button>
+            <button class="calendar__day">2</button>
+            <button class="calendar__day">3</button>
+            <button class="calendar__day">4</button>
+            <button class="calendar__day">5</button>
+            <button class="calendar__day">6</button>
+            <button class="calendar__day">7</button>
+            <button class="calendar__day">8</button>
+            <button class="calendar__day">9</button>
+            <button class="calendar__day">10</button>
+            <button class="calendar__day">11</button>
+            <button class="calendar__day">12</button>
+            <button class="calendar__day">13</button>
+            <button class="calendar__day">14</button>
+            <button class="calendar__day">15</button>
+            <button class="calendar__day">16</button>
+            <button class="calendar__day">17</button>
+            <button class="calendar__day">18</button>
+            <button class="calendar__day">19</button>
+            <button class="calendar__day">20</button>
+            <button class="calendar__day">21</button>
+            <button class="calendar__day">22</button>
+            <button class="calendar__day">23</button>
+            <button class="calendar__day">24</button>
+            <button class="calendar__day">25</button>
+            <button class="calendar__day _active _start">26</button>
+            <button class="calendar__day _active">27</button>
+            <button class="calendar__day _active">28</button>
+            <button class="calendar__day _active">29</button>
+            <button class="calendar__day _active _end">30</button>
+            <button class="calendar__day _inactive">1</button>
+            <button class="calendar__day _inactive">2</button>
+            <button class="calendar__day _inactive">3</button>
+            <button class="calendar__day _inactive">4</button>
+            <button class="calendar__day _inactive">5</button>
           </div>
         </div>
       </div>
-    </div>
-    <div style="width:320px;">
-      <h2>Width 320px</h2>
-      <div class="alpako-calendar">
-        <nav>
-          <div class="prev ta-center">&#8249;</div>
-          <div class="month ta-center">Январь</div>
-          <div class="next ta-center">&#8250;</div>
-        </nav>
-        <div class="content">
-          <div class="row">
-            <div class="col">
-              <div class="item bordered selected-one">1</div>
-            </div>
-            <div class="col">
-              <div class="item">2</div>
-            </div>
-            <div class="col">
-              <div class="item">3</div>
-            </div>
-            <div class="col">
-              <div class="item">4</div>
-            </div>
-            <div class="col">
-              <div class="item">5</div>
-            </div>
-            <div class="col">
-              <div class="item">6</div>
-            </div>
-            <div class="col">
-              <div class="item">7</div>
-            </div>
+      <div style="width:320px;">
+        <h2>Width 320px</h2>
+        <div class="calendar">
+          <div class="calendar__nav">
+            <button class="calendar__prev"><span class="arrow-left"> </span></button>
+            <div class="calendar__month">Январь</div>
+            <button class="calendar__next"><span class="arrow-right"></span></button>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">8</div>
-            </div>
-            <div class="col">
-              <div class="item">9</div>
-            </div>
-            <div class="col">
-              <div class="item">10</div>
-            </div>
-            <div class="col">
-              <div class="item">11</div>
-            </div>
-            <div class="col">
-              <div class="item">12</div>
-            </div>
-            <div class="col">
-              <div class="item">13</div>
-            </div>
-            <div class="col">
-              <div class="item">14</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">15</div>
-            </div>
-            <div class="col">
-              <div class="item">16</div>
-            </div>
-            <div class="col">
-              <div class="item">17</div>
-            </div>
-            <div class="col">
-              <div class="item">18</div>
-            </div>
-            <div class="col">
-              <div class="item">19</div>
-            </div>
-            <div class="col">
-              <div class="item">20</div>
-            </div>
-            <div class="col">
-              <div class="item">21</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">22</div>
-            </div>
-            <div class="col">
-              <div class="item">23</div>
-            </div>
-            <div class="col">
-              <div class="item">24</div>
-            </div>
-            <div class="col">
-              <div class="item">25</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-first">
-                <div class="bg-selected selected-one">26</div>
-              </div>
-            </div>
-            <div class="col selected">
-              <div class="item">27</div>
-            </div>
-            <div class="col selected">
-              <div class="item">28</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col selected">
-              <div class="item">29</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-last">
-                <div class="bg-selected selected-one">30</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="item inactive">1</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">2</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">3</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">4</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">5</div>
-            </div>
+          <div class="calendar__body">
+            <button class="calendar__day _active _start _end">1</button>
+            <button class="calendar__day">2</button>
+            <button class="calendar__day">3</button>
+            <button class="calendar__day">4</button>
+            <button class="calendar__day">5</button>
+            <button class="calendar__day">6</button>
+            <button class="calendar__day">7</button>
+            <button class="calendar__day">8</button>
+            <button class="calendar__day">9</button>
+            <button class="calendar__day">10</button>
+            <button class="calendar__day">11</button>
+            <button class="calendar__day">12</button>
+            <button class="calendar__day">13</button>
+            <button class="calendar__day">14</button>
+            <button class="calendar__day">15</button>
+            <button class="calendar__day">16</button>
+            <button class="calendar__day">17</button>
+            <button class="calendar__day">18</button>
+            <button class="calendar__day">19</button>
+            <button class="calendar__day">20</button>
+            <button class="calendar__day">21</button>
+            <button class="calendar__day">22</button>
+            <button class="calendar__day">23</button>
+            <button class="calendar__day">24</button>
+            <button class="calendar__day">25</button>
+            <button class="calendar__day _active _start">26</button>
+            <button class="calendar__day _active">27</button>
+            <button class="calendar__day _active">28</button>
+            <button class="calendar__day _active">29</button>
+            <button class="calendar__day _active _end">30</button>
+            <button class="calendar__day _inactive">1</button>
+            <button class="calendar__day _inactive">2</button>
+            <button class="calendar__day _inactive">3</button>
+            <button class="calendar__day _inactive">4</button>
+            <button class="calendar__day _inactive">5</button>
           </div>
         </div>
       </div>
-    </div>
-    <div style="width:400px;">
-      <h2>Width 400px</h2>
-      <div class="alpako-calendar">
-        <nav>
-          <div class="prev ta-center">&#8249;</div>
-          <div class="month ta-center">Январь</div>
-          <div class="next ta-center">&#8250;</div>
-        </nav>
-        <div class="content">
-          <div class="row">
-            <div class="col">
-              <div class="item bordered selected-one">1</div>
-            </div>
-            <div class="col">
-              <div class="item">2</div>
-            </div>
-            <div class="col">
-              <div class="item">3</div>
-            </div>
-            <div class="col">
-              <div class="item">4</div>
-            </div>
-            <div class="col">
-              <div class="item">5</div>
-            </div>
-            <div class="col">
-              <div class="item">6</div>
-            </div>
-            <div class="col">
-              <div class="item">7</div>
-            </div>
+      <div style="width:400px;">
+        <h2>Width 400px</h2>
+        <div class="calendar">
+          <div class="calendar__nav">
+            <button class="calendar__prev"><span class="arrow-left"> </span></button>
+            <div class="calendar__month">Январь</div>
+            <button class="calendar__next"><span class="arrow-right"></span></button>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">8</div>
-            </div>
-            <div class="col">
-              <div class="item">9</div>
-            </div>
-            <div class="col">
-              <div class="item">10</div>
-            </div>
-            <div class="col">
-              <div class="item">11</div>
-            </div>
-            <div class="col">
-              <div class="item">12</div>
-            </div>
-            <div class="col">
-              <div class="item">13</div>
-            </div>
-            <div class="col">
-              <div class="item">14</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">15</div>
-            </div>
-            <div class="col">
-              <div class="item">16</div>
-            </div>
-            <div class="col">
-              <div class="item">17</div>
-            </div>
-            <div class="col">
-              <div class="item">18</div>
-            </div>
-            <div class="col">
-              <div class="item">19</div>
-            </div>
-            <div class="col">
-              <div class="item">20</div>
-            </div>
-            <div class="col">
-              <div class="item">21</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="item">22</div>
-            </div>
-            <div class="col">
-              <div class="item">23</div>
-            </div>
-            <div class="col">
-              <div class="item">24</div>
-            </div>
-            <div class="col">
-              <div class="item">25</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-first">
-                <div class="bg-selected selected-one">26</div>
-              </div>
-            </div>
-            <div class="col selected">
-              <div class="item">27</div>
-            </div>
-            <div class="col selected">
-              <div class="item">28</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col selected">
-              <div class="item">29</div>
-            </div>
-            <div class="col">
-              <div class="item selected bordered selected-last">
-                <div class="bg-selected selected-one">30</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="item inactive">1</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">2</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">3</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">4</div>
-            </div>
-            <div class="col">
-              <div class="item inactive">5</div>
-            </div>
+          <div class="calendar__body">
+            <button class="calendar__day _active _start _end">1</button>
+            <button class="calendar__day">2</button>
+            <button class="calendar__day">3</button>
+            <button class="calendar__day">4</button>
+            <button class="calendar__day">5</button>
+            <button class="calendar__day">6</button>
+            <button class="calendar__day">7</button>
+            <button class="calendar__day">8</button>
+            <button class="calendar__day">9</button>
+            <button class="calendar__day">10</button>
+            <button class="calendar__day">11</button>
+            <button class="calendar__day">12</button>
+            <button class="calendar__day">13</button>
+            <button class="calendar__day">14</button>
+            <button class="calendar__day">15</button>
+            <button class="calendar__day">16</button>
+            <button class="calendar__day">17</button>
+            <button class="calendar__day">18</button>
+            <button class="calendar__day">19</button>
+            <button class="calendar__day">20</button>
+            <button class="calendar__day">21</button>
+            <button class="calendar__day">22</button>
+            <button class="calendar__day">23</button>
+            <button class="calendar__day">24</button>
+            <button class="calendar__day">25</button>
+            <button class="calendar__day _active _start">26</button>
+            <button class="calendar__day _active">27</button>
+            <button class="calendar__day _active">28</button>
+            <button class="calendar__day _active">29</button>
+            <button class="calendar__day _active _end">30</button>
+            <button class="calendar__day _inactive">1</button>
+            <button class="calendar__day _inactive">2</button>
+            <button class="calendar__day _inactive">3</button>
+            <button class="calendar__day _inactive">4</button>
+            <button class="calendar__day _inactive">5</button>
           </div>
         </div>
       </div>

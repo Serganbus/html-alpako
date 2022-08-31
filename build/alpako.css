@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
@@ -23,129 +22,126 @@
   font-style: normal;
   font-weight: 700;
 }
-.alpako-calendar > .content > .row .col > .item.selected-last > .bg-selected, .alpako-calendar > .content > .row .col > .item.selected-first > .bg-selected, .alpako-calendar > .content > .row .col > .item, .alpako-calendar > .content > .row, .alpako-calendar > .content, .alpako-calendar > nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.calendar__day, .calendar__prev, .calendar__next, .calendar {
+  font: 12px/14px "Roboto";
+  font-weight: 500;
+  color: white;
 }
 
-.alpako-calendar > .content > .row .col > .item:hover, .alpako-calendar > nav > .month:hover, .alpako-calendar > nav > .prev:hover, .alpako-calendar > nav > .next:hover {
-  cursor: pointer;
+.arrow-left {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%220 0 32 32%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22rgb(255, 255, 255)%22 d=%22M20 11.4L18.4865 10L12 16L18.4865 22L20 20.6L15.027 16L20 11.4Z%22/%3E%3C/svg%3E");
 }
 
-.alpako-calendar {
+.arrow-right {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%220 0 32 32%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22rgb(255, 255, 255)%22 d=%22M12 11.4L13.5135 10L20 16L13.5135 22L12 20.6L16.973 16L12 11.4Z%22/%3E%3C/svg%3E");
+}
+
+.calendar {
   position: relative;
   min-width: 240px;
   max-width: 400px;
   width: 100%;
   background: rgba(19, 20, 23, 0.9);
-  box-sizing: border-box;
-  text-align: center;
-  font: 12px/14px "Roboto";
-  font-weight: 500;
-  color: white;
   border-radius: 6px;
 }
-.alpako-calendar::before {
+.calendar::before {
   content: "";
   display: block;
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: -10;
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: url("../images/bg.png") center no-repeat;
   background-size: cover;
   border-radius: 6px;
 }
-.alpako-calendar > nav {
-  padding: 15px 0px;
+.calendar__nav {
+  padding: 12px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.alpako-calendar > nav > .prev, .alpako-calendar > nav > .next {
-  flex-grow: 1;
+.calendar__prev, .calendar__next {
+  background: none;
+  flex-grow: 0;
   font-size: 2em;
 }
-.alpako-calendar > nav > .month {
-  flex-grow: 5;
+.calendar__prev:hover, .calendar__next:hover {
+  cursor: pointer;
+}
+.calendar__month {
+  flex-grow: 10;
   text-transform: uppercase;
 }
-.alpako-calendar > .content {
-  flex-direction: column;
-  align-items: stretch;
-  line-height: 25px;
+.calendar__month:hover {
+  cursor: pointer;
 }
-.alpako-calendar > .content > .row {
-  margin-bottom: 8px;
-  flex-direction: row;
-  flex-grow: 1;
-  flex-shrink: 1;
+.calendar__body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
 }
-.alpako-calendar > .content > .row .selected {
-  background: #2D9CDB;
-}
-.alpako-calendar > .content > .row .selected-one {
-  background: #425c6b;
-}
-.alpako-calendar > .content > .row .bordered {
-  border: 2px solid #2D9CDB;
-  border-radius: 50%;
-}
-.alpako-calendar > .content > .row .col {
+.calendar__day {
+  aspect-ratio: 1;
+  width: 14.2857142857%;
   position: relative;
-  flex-grow: 1;
+  isolation: isolate;
+  border: 0;
+  background: none;
 }
-.alpako-calendar > .content > .row .col:first-child {
-  padding-left: 8px;
-}
-.alpako-calendar > .content > .row .col:first-child > .item {
-  left: 8px;
-}
-.alpako-calendar > .content > .row .col:last-child {
-  padding-right: 8px;
-}
-.alpako-calendar > .content > .row .col:last-child > .item {
-  right: 8px;
-}
-.alpako-calendar > .content > .row .col::before {
-  display: block;
-  /* отображать элемент как блок */
+.calendar__day::before, .calendar__day::after {
   content: "";
-  /* содержимое псевдоэлемента */
-  width: 100%;
-  /* ширина элемента */
-  padding-top: 100%;
-  /* (1:1)*100% */
-}
-.alpako-calendar > .content > .row .col > .item {
   position: absolute;
-  top: 0;
-  left: 0;
+  z-index: -1;
+}
+.calendar__day::before {
+  inset: 4px;
+}
+.calendar__day::after {
+  inset: 6px;
+}
+.calendar__day._start::after, .calendar__day._end::after {
+  border-radius: 50%;
+  background-color: #425c6b;
+}
+.calendar__day._active:before {
+  background-color: #2D9CDB;
   right: 0;
-  bottom: 0;
+  left: 0;
 }
-.alpako-calendar > .content > .row .col > .item.inactive {
+.calendar__day:nth-child(7n)._active::before {
+  right: -8px;
+}
+.calendar__day:nth-child(7n-6)._active::before {
+  left: -8px;
+}
+.calendar__day:nth-child(7n)._active._end::before {
+  right: 4px;
+}
+.calendar__day:nth-child(7n-6)._active._start::before {
+  left: 4px;
+}
+.calendar__day._start::before {
+  left: 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.calendar__day._end::before {
+  right: 4px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.calendar__day._inactive {
   opacity: 0.5;
-}
-.alpako-calendar > .content > .row .col > .item.selected-first {
-  border-right: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-.alpako-calendar > .content > .row .col > .item.selected-first > .bg-selected {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.alpako-calendar > .content > .row .col > .item.selected-last {
-  border-left: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-.alpako-calendar > .content > .row .col > .item.selected-last > .bg-selected {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
 }
 
 /*# sourceMappingURL=alpako.css.map */
