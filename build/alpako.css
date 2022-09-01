@@ -96,6 +96,7 @@
   position: relative;
   isolation: isolate;
   border: 0;
+  cursor: pointer;
   background: none;
 }
 .calendar__day::before, .calendar__day::after {
